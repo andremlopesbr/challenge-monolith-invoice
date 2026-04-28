@@ -1,29 +1,4 @@
 {
-<<<<<<< HEAD
-    "name": "challenge-monolith-invoice",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-          "test": "jest",
-          "tsc": "tsc"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-          "@types/jest": "^27.4.1",
-          "jest": "^27.5.1",
-          "ts-jest": "^27.1.4",
-          "typescript": "^4.6.3"
-    },
-    "dependencies": {
-          "sequelize": "^6.17.0",
-          "sequelize-typescript": "^2.1.3",
-          "sqlite3": "^5.0.2",
-          "reflect-metadata": "^0.1.13"
-    }
-=======
   "name": "challenge-monolith-invoice",
   "version": "1.0.0",
   "description": "Desafio: Módulo de Invoice (Sistemas Monolíticos)",
@@ -44,5 +19,4 @@
     "ts-jest": "^29.1.0",
     "typescript": "^5.0.4"
   }
->>>>>>> 693ae26 (feat: sync local changes with repository)
 }

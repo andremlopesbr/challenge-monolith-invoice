@@ -6,37 +6,6 @@ import InvoiceItem from "./invoice-item.entity";
 
 type InvoiceProps = {
   id?: Id;
-<<<<<<< HEAD
-    name: string;
-      document: string;
-        address: Address;
-          items: InvoiceItem[];
-            createdAt?: Date;
-              updatedAt?: Date;
-              };
-
-              export default class Invoice extends BaseEntity implements AggregateRoot {
-                private _name: string;
-                  private _document: string;
-                    private _address: Address;
-                      private _items: InvoiceItem[];
-
-                        constructor(props: InvoiceProps) {
-                            super(props.id, props.createdAt, props.updatedAt);
-                                this._name = props.name;
-                                    this._document = props.document;
-                                        this._address = props.address;
-                                            this._items = props.items;
-                                              }
-
-                                                get name(): string { return this._name; }
-                                                  get document(): string { return this._document; }
-                                                    get address(): Address { return this._address; }
-                                                      get items(): InvoiceItem[] { return this._items; }
-                                                        get total(): number { return this._items.reduce((total, item) => total + item.price, 0); }
-                                                        }
-                                                        
-=======
   name: string;
   document: string;
   address: Address;
@@ -79,4 +48,3 @@ export default class Invoice extends BaseEntity implements AggregateRoot {
     return this._items.reduce((total, item) => total + item.price, 0);
   }
 }
->>>>>>> 693ae26 (feat: sync local changes with repository)
