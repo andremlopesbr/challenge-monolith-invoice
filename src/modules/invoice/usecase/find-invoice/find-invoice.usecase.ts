@@ -1,5 +1,6 @@
 import InvoiceGateway from "../../gateway/invoice.gateway";
 import {
+<<<<<<< HEAD
     FindInvoiceUseCaseInputDTO,
     FindInvoiceUseCaseOutputDTO,
 } from "./find-invoice.dto";
@@ -32,5 +33,39 @@ export default class FindInvoiceUseCase {
               total: invoice.total,
               createdAt: invoice.createdAt,
       };
+=======
+  FindInvoiceUseCaseInputDTO,
+  FindInvoiceUseCaseOutputDTO,
+} from "./find-invoice.dto";
+
+export default class FindInvoiceUseCase {
+  constructor(private readonly invoiceGateway: InvoiceGateway) {}
+
+  async execute(
+    input: FindInvoiceUseCaseInputDTO
+  ): Promise<FindInvoiceUseCaseOutputDTO> {
+    const invoice = await this.invoiceGateway.find(input.id);
+
+    return {
+      id: invoice.id.id,
+      name: invoice.name,
+      document: invoice.document,
+      address: {
+        street: invoice.address.street,
+        number: invoice.address.number,
+        complement: invoice.address.complement,
+        city: invoice.address.city,
+        state: invoice.address.state,
+        zipCode: invoice.address.zipCode,
+      },
+      items: invoice.items.map((item) => ({
+        id: item.id.id,
+        name: item.name,
+        price: item.price,
+      })),
+      total: invoice.total,
+      createdAt: invoice.createdAt,
+    };
+>>>>>>> 693ae26 (feat: sync local changes with repository)
   }
 }

@@ -4,10 +4,25 @@ import FindInvoiceUseCase from "../usecase/find-invoice/find-invoice.usecase";
 import GenerateInvoiceUseCase from "../usecase/generate-invoice/generate-invoice.usecase";
 
 export default class InvoiceFacadeFactory {
+<<<<<<< HEAD
     static create() {
           const repository = new InvoiceRepository();
           const findUseCase = new FindInvoiceUseCase(repository);
           const generateUseCase = new GenerateInvoiceUseCase(repository);
           return new InvoiceFacade({ findUseCase, generateUseCase });
     }
+=======
+  static create() {
+    const repository = new InvoiceRepository();
+    const findUseCase = new FindInvoiceUseCase(repository);
+    const generateUseCase = new GenerateInvoiceUseCase(repository);
+
+    const facade = new InvoiceFacade({
+      findUseCase: findUseCase,
+      generateUseCase: generateUseCase,
+    });
+
+    return facade;
+  }
+>>>>>>> 693ae26 (feat: sync local changes with repository)
 }
