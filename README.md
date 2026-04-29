@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# challenge-monolith-invoice
-
-Para rodar os testes: npm install && npm test
-=======
 # Desafio: Módulo de Invoice (Sistemas Monolíticos)
 
 Este projeto implementa o módulo de faturamento (Invoice) dentro de uma arquitetura de sistemas monolíticos, utilizando Domain-Driven Design (DDD) e o padrão Facade.
@@ -22,4 +17,3 @@ npm install
 ```bash
 npm test
 ```
->>>>>>> 693ae26 (feat: sync local changes with repository)
